@@ -16,22 +16,31 @@ public class LoginSteps extends CommonMethods {
 
     @When("user enters valid admin username and password")
     public void user_enters_valid_admin_username_and_password() {
-        WebElement username=driver.findElement(By.id("txtUsername"));
+        WebElement username = driver.findElement(By.id("txtUsername"));
         username.sendKeys("Admin");
-        WebElement password= driver.findElement(By.id("txtPassword"));
+        WebElement password = driver.findElement(By.id("txtPassword"));
         password.sendKeys("Hum@nhrm123");
     }
 
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
-
-        WebElement logiButton=driver.findElement(By.id("btnLogin"));
-                logiButton.click();
+        WebElement loginButton = driver.findElement(By.id("btnLogin"));
+        loginButton.click();
     }
 
     @Then("admin user is succesfully logged in")
     public void admin_user_is_succesfully_logged_in() {
-        System.out.println("Test is passed");
+        System.out.println("Test passed");
+
     }
 
+    @Then("user closes the browser")
+    public void user_closes_the_browser() {
+     closeBrowser();
+    }
+
+    @When("user enters valid ess username and password")
+    public void user_enters_valid_ess_username_and_password() {
+        System.out.println("hello");
+    }
 }

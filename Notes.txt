@@ -73,3 +73,18 @@ Then user see employee in the employee table
 
 
 Login feature
+
+Class 3
+Recap
+
+.To increase transparency /to reduce communication gap
+.It supports BDD(Gherkin language - easy to understand for non-technical people also
+.It focuses on end user
+
+Feature File - to write test scenarios
+
+keywords
+Given= Pre Condition
+When= Perform actions
+And= supporting tag
+Then= result
