@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         // features  we use to provide the path of all the new feature files
-        features = "src/test/resources/features/login.feature",
+        features = "src/test/resources/features/",
         // glue is where we find implementation for gherkin steps
         // we provide the path of package where we defined all the steps
         glue = "steps",
@@ -20,9 +20,9 @@ import org.junit.runner.RunWith;
         // when we set it to true it simply removes all the irrelevant information from the console
         monochrome = true,
        // tags will identify the scenario based on the tag we provide to the feature file
-       tags = "@regression",
+       tags = "@dashboard",
         plugin = {"pretty","html:target/cucumber.html"}
 
 )
-public class RunnerClass {
+public class Smoke {
 }

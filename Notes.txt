@@ -88,3 +88,48 @@ Given= Pre Condition
 When= Perform actions
 And= supporting tag
 Then= result
+
+Step definition - to implement the code for the steps written in feature file, we use step definitions
+
+Runner class -
+
+features,
+glue,
+dryrun
+monochrome
+tags
+plugins
+strict
+
+background - it applicable only for one feature file, here we add common steps among all the scenarios
+
+Class 4
+
+Recap
+
+Runner class - to compare the execution flow of our test cases
+
+@runwith- from junit
+@cucumberoptions- to provide configurations
+
+features- path of my feature files
+
+glue- path of the step definitions for feature files
+
+dryrun- if it is set to true , if stops actual execution and provides the missing steps snippet
+
+momochrome- it removes unreadable character and cleans the console
+
+tags- for grouping
+
+plugins- for report generation and other purposes
+
+background- to put steps among all the scenarios from single file feature file we use background
+
+Hooks we use hooks to provide pre conditions and post conditions
+we should provide hooks under the package where my steps are available
+
+Hooks vs Background-
+
+Background = it is applicable to one feature file
+hooks= it is application to all the feature files
