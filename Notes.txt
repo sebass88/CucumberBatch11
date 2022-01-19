@@ -133,3 +133,18 @@ Hooks vs Background-
 
 Background = it is applicable to one feature file
 hooks= it is application to all the feature files
+
+
+Class 5-
+
+Hooks-
+before and after = pre condition and post condition
+
+Passing the data
+passing the data directly from the feature file -scenario
+passing the data from @examples table from scenario outline to achieve ddt
+from data table
+
+data table vs examples
+data table is application to just a single step
+example table is applicable to complete scenario

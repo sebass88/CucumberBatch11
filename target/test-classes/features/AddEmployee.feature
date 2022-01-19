@@ -38,3 +38,7 @@ Background:
       |test123  |MS        |test456 |
       |testabc  |MS        |testxyz |
       |test987  |MS        |test321 |
+
+@excel
+    Scenario: Adding Employees from excel File
+      When user adds multiple employees from excel file using "EmployeeData" sheet and verify the added employee

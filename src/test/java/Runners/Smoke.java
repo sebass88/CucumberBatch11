@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         // when we set it to true it simply removes all the irrelevant information from the console
         monochrome = true,
        // tags will identify the scenario based on the tag we provide to the feature file
-       tags = "@dashboard",
+       tags = "@excel",
         plugin = {"pretty","html:target/cucumber.html"}
 
 )
