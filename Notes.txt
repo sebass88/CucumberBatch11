@@ -148,3 +148,6 @@ from data table
 data table vs examples
 data table is application to just a single step
 example table is applicable to complete scenario
+
+Class 6-
+this framework supports BDD and DDT

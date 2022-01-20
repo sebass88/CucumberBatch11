@@ -1,5 +1,6 @@
 package steps;
 
+import Pages.DashboardPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -13,12 +14,16 @@ import java.util.List;
 public class DashboardSteps extends CommonMethods {
     @Then("verify all the dashboard tabs")
     public void verify_all_the_dashboard_tabs(DataTable dataTable) {
-       List<String> expectedtabs= dataTable.asList();
 
-       List<WebElement> Dashboardtabs=driver.findElements(By.xpath("//*[@class='menu']/ul/li"));
-        List<String> actualTabs=new ArrayList<>();
+        //DashboardPage dash=new DashboardPage();
 
-       for(WebElement ele:Dashboardtabs){
+        List<String> expectedtabs= dataTable.asList();
+
+      // List<WebElement> Dashboardtabs=driver.findElements(By.xpath("//*[@class='menu']/ul/li"));
+
+       List<String> actualTabs=new ArrayList<>();
+
+       for(WebElement ele:dash.dashboardTabs){
            actualTabs.add(ele.getText());
        }
         System.out.println(expectedtabs);  // coming from feature file
