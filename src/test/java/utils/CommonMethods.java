@@ -1,9 +1,13 @@
 package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.PageInitializer;
 
 
@@ -35,7 +39,40 @@ public class CommonMethods extends PageInitializer {
         initializePageObjects();
     }
 
+    public static void SendText(WebElement element,String textToSend){
+        element.clear();
+        element.sendKeys(textToSend);
+    }
+
+    public static WebDriverWait getWait(){
+        WebDriverWait wait=new WebDriverWait(driver,Constants.EXPLICIT_WAIT);
+        return wait;
+    }
+
+    public static void waitForClickability(WebElement element){
+        getWait().until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void click(WebElement element){
+        waitForClickability(element);
+        element.click();
+    }
+
+    public static JavascriptExecutor getJSEexecutor(){
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        return js;
+    }
+
+    public static void jsClick(WebElement element){
+        getJSEexecutor().executeScript("arguments[0].click",element);
+    }
+
+
+
+
     public static void closeBrowser(){
         driver.quit();
     }
+
+
 }

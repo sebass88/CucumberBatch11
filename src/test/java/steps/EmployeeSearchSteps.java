@@ -16,26 +16,32 @@ public class EmployeeSearchSteps extends CommonMethods {
         //DashboardPage dash=new DashboardPage();
 
         //WebElement pimOption = driver.findElement(By.id("menu_pim_viewPimModule"));
-        dash.PimOption.click();
+       // dash.PimOption.click();
+        //click(dash.PimOption);
+        jsClick(dash.PimOption);
+
 
 
 
         //WebElement employeeListOption = driver.findElement(By.id("menu_pim_viewEmployeeList"));
-        dash.employeeListButton.click();
+        //dash.employeeListButton.click();
+        click(dash.employeeListButton);
     }
 
     @When("user enters valid employee id")
     public void user_enters_valid_employee_id() {
         //WebElement searchByID = driver.findElement(By.id("empsearch_id"));
         //searchByID.sendKeys("23638000");
-        employeeListPage.idEmployeeSearch.sendKeys("26368000");
+       // employeeListPage.idEmployeeSearch.sendKeys("26368000");
+        SendText(employeeListPage.idEmployeeSearch,"26368000");
     }
 
     @When("user clicks on search button")
     public void user_clicks_on_search_button() {
         //WebElement searchButton = driver.findElement(By.id("searchBtn"));
         //searchButton.click();
-        employeeListPage.searchButton.click();
+        //employeeListPage.searchButton.click();
+        click(employeeListPage.searchButton);
     }
 
     @Then("user sees employee information is displayed")
@@ -49,6 +55,8 @@ public class EmployeeSearchSteps extends CommonMethods {
         //WebElement name = driver.findElement(By.id("empsearch_employee_name_empName"));
         //name.sendKeys("XYZT");
         employeeListPage.empSearchStepByName.sendKeys("XYZT");
+        SendText(employeeListPage.empSearchStepByName, "XYZT");
+
     }
 
     @Then("user close the browser")

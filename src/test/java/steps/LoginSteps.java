@@ -20,19 +20,22 @@ public class LoginSteps extends CommonMethods {
     @When("user enters valid admin username and password")
     public void user_enters_valid_admin_username_and_password() {
        // LoginPage login=new LoginPage();
-        loginPage.usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
+        //loginPage.usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
         //WebElement username = driver.findElement(By.id("txtUsername"));
         //username.sendKeys(ConfigReader.getPropertyValue("username"));
-        loginPage.passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
+        SendText(loginPage.usernameField,ConfigReader.getPropertyValue("username"));
+       // loginPage.passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
         //WebElement password = driver.findElement(By.id("txtPassword"));
         //password.sendKeys(ConfigReader.getPropertyValue("password"));
+        SendText(loginPage.passwordField,ConfigReader.getPropertyValue("password"));
     }
 
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
         // LoginPage login = new LoginPage();
         // WebElement loginButton = driver.findElement(By.id("btnLogin"));
-        loginPage.loginBtn.click();
+        //loginPage.loginBtn.click();
+        click(loginPage.loginBtn);
     }
 
     @Then("admin user is succesfully logged in")
@@ -54,11 +57,14 @@ public class LoginSteps extends CommonMethods {
     public void user_enters_different_and_and_verify_the_for_all_the_combinations(String usernameValue, String passwordValue, String error) {
         //LoginPage login=new LoginPage();
        // WebElement username = driver.findElement(By.id("txtUsername"));
-      loginPage.usernameField.sendKeys(usernameValue);
+      //loginPage.usernameField.sendKeys(usernameValue);
+      SendText(loginPage.usernameField, usernameValue);
         //WebElement password = driver.findElement(By.id("txtPassword"));
       loginPage.passwordField.sendKeys(passwordValue);
+      SendText(loginPage.passwordField, passwordValue);
       //WebElement loginbutton=driver.findElement(By.id("btnLogin"));
-      loginPage.loginBtn.click();
+     // loginPage.loginBtn.click();
+      click(loginPage.loginBtn);
 
       //WebElement errorMessage=driver.findElement(By.id("spanMessage"));
       String errorActual=loginPage.errorMessage.getText();
@@ -68,10 +74,12 @@ public class LoginSteps extends CommonMethods {
     public void user_enters_different_and(String usernameValue, String passwordValue) {
         //WebElement username = driver.findElement(By.id("txtUsername"));
         //username.sendKeys(usernameValue);
-        loginPage.usernameField.sendKeys(usernameValue);
+        //loginPage.usernameField.sendKeys(usernameValue);
+        SendText(loginPage.usernameField,usernameValue);
         //WebElement password = driver.findElement(By.id("txtPassword"));
         //password.sendKeys(passwordValue);
-        loginPage.passwordField.sendKeys(passwordValue);
+        //loginPage.passwordField.sendKeys(passwordValue);
+        SendText(loginPage.passwordField,passwordValue);
 
     }
 
@@ -79,5 +87,9 @@ public class LoginSteps extends CommonMethods {
     public void user_is_succesfully_logged_in(String admin) {
        //WebElement dashboardMessage= driver.findElement(By.id("welcome"));
        Assert.assertTrue(dash.welcomeMessage.isDisplayed());
+    }
+    @When("user is logged in with valid admin credentials")
+    public void user_is_logged_in_with_valid_admin_credentials() {
+       loginPage.login(ConfigReader.getPropertyValue("username"),ConfigReader.getPropertyValue("password"));
     }
 }

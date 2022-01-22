@@ -151,3 +151,13 @@ example table is applicable to complete scenario
 
 Class 6-
 this framework supports BDD and DDT
+
+
+Class 7
+
+recap-
+
+Page object model design pattern-
+
+it allows us to create classes according to the pages available in the application
+we place all locators and functions related to this

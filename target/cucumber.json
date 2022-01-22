@@ -1,0 +1,119 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3516000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is logged in with valid admin credentials",
+            "match": {
+              "location": "steps.LoginSteps.user_is_logged_in_with_valid_admin_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5081000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigates to employee list page",
+            "match": {
+              "location": "steps.EmployeeSearchSteps.user_navigates_to_employee_list_page()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-22T18:51:10.303Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11800000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.start()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Search employee by id",
+        "description": "",
+        "id": "us-12345-employee-search;search-employee-by-id",
+        "after": [
+          {
+            "result": {
+              "duration": 744000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 136000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters valid employee id",
+            "match": {
+              "location": "steps.EmployeeSearchSteps.user_enters_valid_employee_id()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2459000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user clicks on search button",
+            "match": {
+              "location": "steps.EmployeeSearchSteps.user_clicks_on_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user sees employee information is displayed",
+            "match": {
+              "location": "steps.EmployeeSearchSteps.user_sees_employee_information_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "US-12345 Employee search",
+    "description": "",
+    "id": "us-12345-employee-search",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/EmployeeSearch.feature",
+    "tags": []
+  }
+]
