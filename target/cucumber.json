@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
+        "line": 2,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,36 +11,72 @@
         "steps": [
           {
             "result": {
-              "duration": 3516000000,
+              "duration": 638000000,
               "status": "passed"
             },
-            "line": 4,
-            "name": "user is logged in with valid admin credentials",
+            "line": 3,
+            "name": "user enters valid admin username and password",
             "match": {
-              "location": "steps.LoginSteps.user_is_logged_in_with_valid_admin_credentials()"
+              "location": "steps.LoginSteps.user_enters_valid_admin_username_and_password()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 5081000000,
+              "duration": 2238000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "user navigates to employee list page",
+            "line": 4,
+            "name": "user clicks on login button",
             "match": {
-              "location": "steps.EmployeeSearchSteps.user_navigates_to_employee_list_page()"
+              "location": "steps.LoginSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "admin user is succesfully logged in",
+            "match": {
+              "location": "steps.LoginSteps.admin_user_is_succesfully_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2061000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on PIM option",
+            "match": {
+              "location": "steps.AddEmployeeSteps.user_clicks_on_pim_option()"
             },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1060000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks Add employee button",
+            "match": {
+              "location": "steps.AddEmployeeSteps.user_clicks_add_employee_button()"
+            },
+            "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2022-01-22T18:51:10.303Z",
+        "start_timestamp": "2022-01-23T01:45:56.850Z",
         "before": [
           {
             "result": {
-              "duration": 11800000000,
+              "duration": 9054000000,
               "status": "passed"
             },
             "match": {
@@ -48,14 +84,14 @@
             }
           }
         ],
-        "line": 11,
-        "name": "Search employee by id",
+        "line": 39,
+        "name": "Modifying Employee Details",
         "description": "",
-        "id": "us-12345-employee-search;search-employee-by-id",
+        "id": "add-employees;modifying-employee-details;;2",
         "after": [
           {
             "result": {
-              "duration": 744000000,
+              "duration": 1164000000,
               "status": "passed"
             },
             "match": {
@@ -64,29 +100,91 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 136000000,
+              "duration": 535000000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "user enters valid employee id",
+            "line": 29,
+            "name": "user clicks Add employee button",
             "match": {
-              "location": "steps.EmployeeSearchSteps.user_enters_valid_employee_id()"
+              "location": "steps.AddEmployeeSteps.user_clicks_add_employee_button()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 2459000000,
+              "duration": 752000000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "user clicks on search button",
+            "line": 30,
+            "name": "user enters \"sebass\" \"A\" and \"garcia\"",
             "match": {
-              "location": "steps.EmployeeSearchSteps.user_clicks_on_search_button()"
+              "arguments": [
+                {
+                  "val": "\"sebass\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"A\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"garcia\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.AddEmployeeSteps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1445000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user clicks on save button",
+            "match": {
+              "location": "steps.AddEmployeeSteps.user_clicks_on_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 249000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user clicks on edit button",
+            "match": {
+              "location": "steps.AddEmployeeSteps.user_clicks_on_edit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 402000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user fills out required information",
+            "match": {
+              "location": "steps.AddEmployeeSteps.user_fills_out_required_information()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1329000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on save button again",
+            "match": {
+              "location": "steps.AddEmployeeSteps.user_clicks_on_save_button_again()"
             },
             "keyword": "And "
           },
@@ -94,26 +192,26 @@
             "result": {
               "status": "passed"
             },
-            "line": 15,
-            "name": "user sees employee information is displayed",
+            "line": 35,
+            "name": "user has succesfully modify employee",
             "match": {
-              "location": "steps.EmployeeSearchSteps.user_sees_employee_information_is_displayed()"
+              "location": "steps.AddEmployeeSteps.user_has_succesfully_modify_employee()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@test"
+            "name": "@ddt2"
           }
         ]
       }
     ],
-    "name": "US-12345 Employee search",
+    "name": "Add Employees",
     "description": "",
-    "id": "us-12345-employee-search",
+    "id": "add-employees",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/EmployeeSearch.feature",
+    "uri": "file:src/test/resources/features/AddEmployee.feature",
     "tags": []
   }
 ]

@@ -17,13 +17,28 @@ Background:
     And user clicks Add employee button
     And user enters "<firstName>" "<middleName>" and "<lastName>"
     And  user clicks on save button
-    Then employee added succesfully
+    Then employee added sucessfully
 
     Examples:
-    |firstName|middleName|lastName
-    |test123  |MS        |test456
-    |testabc  |MS        |testxyz
-    |test987  |MS        |test321
+    |firstName|middleName|lastName|
+    |test123  |MS        |test456 |
+
+
+    @ddt2
+      Scenario Outline: Modifying Employee Details
+      And user clicks Add employee button
+      And user enters "<firstName>" "<middleName>" and "<lastName>"
+      And  user clicks on save button
+      And user clicks on edit button
+      Then user fills out required information
+      And user clicks on save button again
+      Then user has succesfully modify employee
+
+      Examples:
+        |firstName|middleName|lastName|
+        |sebass |A        |garcia|
+
+
 
 @samplecucumberScenario
     Scenario:  Adding one employee using cucumber feature

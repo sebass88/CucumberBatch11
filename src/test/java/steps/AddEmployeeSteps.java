@@ -51,11 +51,31 @@ public class AddEmployeeSteps extends CommonMethods {
        // addNewEmployeePage.SaveButton.click();
         click(addNewEmployeePage.SaveButton);
     }
-
-    @Then("employee added succesfully")
-    public void employee_added_succesfully() {
+    @Then("employee added sucessfully")
+    public void employee_added_sucessfully() {
         System.out.println("Employee Added Succesfully");
     }
+
+    @When("user clicks on edit button")
+    public void user_clicks_on_edit_button() {
+        click(addNewEmployeePage.editButton);
+    }
+    @Then("user fills out required information")
+    public void user_fills_out_required_information() {
+       dropdownByText(addNewEmployeePage.nationality,"Mexican");
+       dropdownByText(addNewEmployeePage.marital,"Married");
+    }
+
+    @Then("user clicks on save button again")
+    public void user_clicks_on_save_button_again() {
+        click(addNewEmployeePage.saveButtonagain);
+    }
+    @Then("user has succesfully modify employee")
+    public void user_has_succesfully_modify_employee() {
+        System.out.println("Hooray  YOU DIDN'T SCREW IT UP");
+    }
+
+
 
     @When("user enters {string} {string} and {string}")
     public void user_enters_and(String firstName, String middleName, String lastName) {

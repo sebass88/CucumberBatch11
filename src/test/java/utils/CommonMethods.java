@@ -1,12 +1,14 @@
 package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.PageInitializer;
 
@@ -66,9 +68,15 @@ public class CommonMethods extends PageInitializer {
     public static void jsClick(WebElement element){
         getJSEexecutor().executeScript("arguments[0].click",element);
     }
+    public static void dropdownByText(WebElement element,String text){
+     Select select=new Select(element);
+     select.selectByVisibleText(text);
 
-
-
+    }
+    public static void dropdownByValue(WebElement element,String value){
+        Select select=new Select(element);
+        select.selectByValue(value);
+    }
 
     public static void closeBrowser(){
         driver.quit();
