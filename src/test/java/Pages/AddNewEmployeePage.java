@@ -49,6 +49,9 @@ public class AddNewEmployeePage extends CommonMethods {
     @FindBy(xpath = "//*[@id='btnSave']")
     public WebElement saveButtonagain;
 
+    @FindBy(id = "personal_optGender_1")
+    public WebElement maleOption;
+
 
     public AddNewEmployeePage(){
         PageFactory.initElements(driver,this);

@@ -1,5 +1,6 @@
 Runners\Smoke.class
 steps\LoginSteps.class
+Runners\FailedRunner.class
 utils\Constants.class
 Pages\AddNewEmployeePage.class
 Pages\DashboardPage.class

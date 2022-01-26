@@ -2,7 +2,7 @@ Feature: Login feature
 Background:
   #Given  user is navigated to HRMS application
 
-  @smoke  @sprint2
+  @smoke  @batch11
   Scenario Outline: Valid admin login
 
     When user enters different "<username>" and "<password>"
@@ -13,7 +13,7 @@ Background:
     |Admin   |Hum@nhrm123|Admin|
 
 
- @regression @smoke
+ @regression @smoke @batch11
     Scenario: Valid ess login
 
       When user enters valid ess username and password

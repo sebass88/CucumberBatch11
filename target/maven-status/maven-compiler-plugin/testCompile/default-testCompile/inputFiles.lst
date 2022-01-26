@@ -6,6 +6,7 @@ C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\steps\LoginSteps.java
 C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\Pages\AddNewEmployeePage.java
 C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\utils\ExcelReading.java
 C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\Pages\EmployeeListPage.java
+C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\Runners\FailedRunner.java
 C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\utils\ConfigReader.java
 C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\Pages\LoginPage.java
 C:\Users\Sebas\IdeaProjects\HrmsBatch11\src\test\java\Runners\Smoke.java

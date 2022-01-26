@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: Runners.Smoke
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.004 s - in Runners.Smoke
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 29.93 s <<< FAILURE! - in Runners.Smoke
+Add Employees.Modifying Employee Details  Time elapsed: 28.992 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"personal_optGender_1"}
+  (Session info: chrome=97.0.4692.99)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-H5EUDQG', ip: '192.168.1.205', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54812}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f7cbd95ec5510fcdfa677205783368c
+*** Element info: {Using=css selector, value=personal_optGender_1}
+

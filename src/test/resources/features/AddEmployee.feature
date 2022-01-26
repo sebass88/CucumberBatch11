@@ -5,7 +5,7 @@ Background:
   Then admin user is succesfully logged in
   When user clicks on PIM option
   And user clicks Add employee button
-@regression
+@regression @mvn
   Scenario:Adding one employee from feature file
     And user enters firstname and lastname
     And  user clicks on save button

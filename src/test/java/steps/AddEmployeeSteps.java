@@ -62,8 +62,9 @@ public class AddEmployeeSteps extends CommonMethods {
     }
     @Then("user fills out required information")
     public void user_fills_out_required_information() {
-       dropdownByText(addNewEmployeePage.nationality,"Mexican");
+       dropdownByText(addNewEmployeePage.nationality,"Peruvian");
        dropdownByText(addNewEmployeePage.marital,"Married");
+       click(addNewEmployeePage.maleOption);
     }
 
     @Then("user clicks on save button again")
