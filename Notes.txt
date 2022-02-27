@@ -212,3 +212,19 @@ Pom.xml file- to add all dependencies
 POM = Page Object model design pattern
 
 According to this pattern , every single page in the application should have a respective class in the project
+
+
+
+JAVA REST ASSURED API--
+
+Rest web webservice allows data to be sent in JSON object
+JSON object consist of key and value pairs
+
+REST ASSURED is DSL(domain specific language)
+this is a java based library we use to automate Rest Api's
+
+Rest Assured follows behavorial BDD (Behavior Driven Development) approach
+
+Given- preparing the request
+When- making the request / making the call /hitting the endpoint
+THen- response

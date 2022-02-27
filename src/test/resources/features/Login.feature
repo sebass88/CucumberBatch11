@@ -13,7 +13,7 @@ Background:
     |Admin   |Hum@nhrm123|Admin|
 
 
- @regression @smoke @batch11
+ @regression @smoke @batch12
     Scenario: Valid ess login
 
       When user enters valid ess username and password
